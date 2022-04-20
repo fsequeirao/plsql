@@ -51,4 +51,12 @@ create or replace function except_cols (
 
 
 
---- ejemplo de exclusión de columnas.
+--- ejemplo de exclusiÃ³n de columnas.
+
+
+SELECT *
+  FROM except_cols(hospitalario.snh_mst_ingresos_egresos, 
+                   columns (edad_exacta_ingreso, 
+                            grupo_etareo_id,
+                            admision_servicio_id, 
+                            preg_ingreso_id))
